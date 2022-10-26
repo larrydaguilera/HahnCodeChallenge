@@ -8,7 +8,7 @@ public interface ProductService {
      List<ProductDto> getAll();
      ProductDto getById(Long id);
 
-     ProductDto updateById(Long id);
+     ProductDto updateById(Long id, ProductDto dto);
 
      ProductDto create(ProductDto dto);
 
