@@ -13,7 +13,7 @@ import java.sql.Timestamp;
 @Entity
 @Data
 @Table(name= "products")
-@SQLDelete(sql = "UPDATE users SET deleted = true Where id=?")
+@SQLDelete(sql = "UPDATE products SET deleted = true Where id=?")
 @Where(clause = "deleted=false")
 public class ProductEntity {
 
@@ -32,6 +32,12 @@ public class ProductEntity {
     @NotBlank
     @Column(nullable = false)
     private String description;
+
+    @NotNull
+    @NotEmpty
+    @NotBlank
+    @Column(nullable = false)
+    private Integer price;
 
     private Timestamp timestamp;
 

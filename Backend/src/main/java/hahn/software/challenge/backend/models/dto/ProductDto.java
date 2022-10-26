@@ -24,4 +24,9 @@ public class ProductDto {
     @NotEmpty(message = "The description can't be empty")
     @NotBlank(message = "The description can't be Blank")
     private String description;
+
+    @NotNull(message = "The price can't be null")
+    @NotEmpty(message = "The price can't be empty")
+    @NotBlank(message = "The price can't be Blank")
+    private Integer price;
 }

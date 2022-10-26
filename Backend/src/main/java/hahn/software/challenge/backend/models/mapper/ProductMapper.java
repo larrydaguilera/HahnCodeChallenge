@@ -15,6 +15,7 @@ public class ProductMapper {
         ProductEntity entity = new ProductEntity();
         entity.setName(dto.getName());
         entity.setDescription(dto.getDescription());
+        entity.setPrice(dto.getPrice());
         entity.setTimestamp(new Timestamp(System.currentTimeMillis()));
         entity.setDeleted(Boolean.FALSE);
         return entity;
@@ -25,6 +26,7 @@ public class ProductMapper {
         dto.setId(entity.getId());
         dto.setName(entity.getName());
         dto.setDescription(entity.getDescription());
+        dto.setPrice(entity.getPrice());
         return dto;
     }
 
@@ -41,12 +43,14 @@ public class ProductMapper {
         entity.setId(dto.getId());
         entity.setName(dto.getName());
         entity.setDescription(dto.getDescription());
+        entity.setPrice(dto.getPrice());
         return entity;
     }
 
     public ProductEntity updateEntity(ProductDto dto, ProductEntity entity){
         entity.setName(dto.getName());
         entity.setDescription(dto.getDescription());
+        entity.setPrice(dto.getPrice());
         return entity;
     }
 }
