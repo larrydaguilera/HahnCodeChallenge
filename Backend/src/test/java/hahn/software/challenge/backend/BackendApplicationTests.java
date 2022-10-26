@@ -1,4 +1,4 @@
-package hahn.software.challenge.Backend;
+package hahn.software.challenge.backend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
